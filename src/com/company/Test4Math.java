@@ -13,13 +13,13 @@ public class Test4Math {
 
         System.out.println(Math.pow(2,3));//2.0^3.0=8.0
 
-        System.out.println(Math.sqrt(9));//9的平方根
+        System.out.println(Math.sqrt(9));//9的平方根  3.0
 
         System.out.println(Math.random());//[0.0-1.0)之间的小数
 
-        System.out.println(Math.round(4.4f));//四舍五入,返回值是int类型
-        System.out.println(Math.round(4.6f));
-        System.out.println(Math.round(4.6));
+        System.out.println(Math.round(4.4f));//四舍五入,返回值是int类型 4
+        System.out.println(Math.round(4.6f));//5
+        System.out.println(Math.round(4.6));//5
 
     }
 }
