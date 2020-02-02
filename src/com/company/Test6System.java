@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
 
 public class Test6System {
     public static void main(String[] args) {
@@ -16,8 +15,8 @@ public class Test6System {
 　　　　　　destPos --> 目标数据中的起始位置。
 　　　　　　length --> 要复制的数组元素的数量。
          */
-        for(int i = 0 ; i < b.length; i++){
-            System.out.println(b[i]);
+        for (int value : b) {
+            System.out.println(value);
         }
 
         System.out.println(System.currentTimeMillis());
