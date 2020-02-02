@@ -1,7 +1,7 @@
 package com.company;
 
 //基本数据类型测试
-public class BaseDataTemplateTest {
+public class Test1BaseDataTemplate {
     public static void main(String[] args) {
         int a = 15;//十进制
         int b = 015;//以0开头的是八进制

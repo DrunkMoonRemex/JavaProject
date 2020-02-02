@@ -3,7 +3,7 @@ package com.company;
 import java.math.BigDecimal;
 
 //浮点类型测试
-public class FloatDateTemplateTest {
+public class Test2FloatDateTemplate {
     public static void main(String[] args) {
         float a = 3.14f; //默认是double类型，转成float需要末尾加f或F
         double b = 6.28;//可加d或D也可不加
