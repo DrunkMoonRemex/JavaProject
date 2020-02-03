@@ -1,4 +1,4 @@
-package com.company;
+package com.datatype;
 
 public class Test4Math {
     public static void main(String[] args) {

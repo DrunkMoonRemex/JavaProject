@@ -1,4 +1,4 @@
-package com.company;
+package com.datatype;
 
 
 public class Test6System {

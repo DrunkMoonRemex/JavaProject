@@ -1,4 +1,4 @@
-package com.company;
+package com.datatype;
 
 //字符和浮点型测试类
 public class Test3CharAndBooleanDataType {

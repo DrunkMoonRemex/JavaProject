@@ -1,4 +1,4 @@
-package com.company;
+package com.datatype;
 
 //基本数据类型测试
 public class Test1BaseDataTemplate {
