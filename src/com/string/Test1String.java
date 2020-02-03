@@ -25,7 +25,8 @@ public class Test1String {
         System.out.println(Integer.toHexString(s1.hashCode()));
         // 打印：c61, 显然s1和s2不是同一个对象
         System.out.println(Integer.toHexString(s2.hashCode()));
-
+        //System.identityHashCode返回给定对象的哈希码，该代码与默认的方法 hashCode() 返回的代码一样，无论给定对象的类是否重写 hashCode()
+        System.out.println("s2地址："+System.identityHashCode(s2));
 
         //编译器做了优化,直接在编译的时候将字符串进行拼接
         String st1 = "hello" + " java";//相当于st1 = "hello java";
