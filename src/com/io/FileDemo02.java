@@ -53,5 +53,9 @@ public class FileDemo02 {
         flag = src.delete();
         System.out.println(flag);
 
+        //补充 con,com3... 为操作系统的设备名，不能正确创建
+        src = new File("D:/IdeaProjects/JavaProject/src/con");
+        System.out.println(src.createNewFile());//false
+
     }
 }
