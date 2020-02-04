@@ -29,6 +29,22 @@ public class FileDemo03 {
             2、listFiles() 列出下级File对象
          */
         dir = new File("D:/IdeaProjects/JavaProject");
+        //列出下级名称
+        String[] subNames = dir.list();
+        for (String s : subNames){
+            System.out.println(s);
+        }
 
+        //下级对象
+        File[] filNames = dir.listFiles();
+        for(File f : filNames){
+            System.out.println(f.getAbsolutePath());
+        }
+
+        //列出所有盘符
+        File[] roots = dir.listRoots();
+        for (File f : roots){
+            System.out.println(f.getAbsolutePath());
+        }
     }
 }
