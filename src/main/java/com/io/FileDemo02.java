@@ -25,7 +25,7 @@ public class FileDemo02 {
          *      文件：isFile
          *      文件夹：isDirctory
          */
-        src  = new File("D:/IdeaProjects/JavaProject/src/remex.jpg");
+        src  = new File("D:/IdeaProjects/JavaProject/src/main/java/remex.jpg");
         System.out.println(src.exists());//true
         System.out.println(src.isFile());//true
         System.out.println(src.isDirectory());//false

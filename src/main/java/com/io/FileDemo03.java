@@ -46,7 +46,7 @@ public class FileDemo03 {
         }
 
         //列出所有盘符
-        File[] roots = dir.listRoots();
+        File[] roots = File.listRoots();
         if (roots!=null){
             for (File f : roots){
                 System.out.println(f.getAbsolutePath());
