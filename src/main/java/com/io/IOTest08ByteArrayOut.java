@@ -1,6 +1,5 @@
 package com.io;
 
-import javax.sound.midi.Soundbank;
 import java.io.*;
 
 /**
@@ -15,7 +14,6 @@ import java.io.*;
 public class IOTest08ByteArrayOut {
     public static void main(String[] args) throws IOException {
         //1、创建源
-        byte[] bytes = null;
         //2、选择流
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         //3、操作(写出)
