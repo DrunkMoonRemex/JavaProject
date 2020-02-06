@@ -10,7 +10,7 @@ import java.io.*;
  * 3、操作
  * 4、释放资源
  */
-public class IOTestWrite06 {
+public class IOTest06Write {
     public static void main(String[] args) {
         File file = new File("src/main/resources/io.txt");
         Writer writer = null;

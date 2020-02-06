@@ -10,7 +10,7 @@ import java.io.*;
  * 3、操作
  * 4、释放资源
  */
-public class IOTestRead05 {
+public class IOTest05Read {
     public static void main(String[] args) throws IOException {
         //1、创建源
         File file = new File("D:/IdeaProjects/JavaProject/src/main/resources/abc.txt");

@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * 文件拷贝
  */
-public class IOTestCopy04 {
+public class IOTest04Copy {
     public static void main(String[] args) {
         copy("src/main/java/remex.jpg","src/main/java/remex2.jpg");
     }
