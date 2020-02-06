@@ -20,7 +20,7 @@ public class IOTest02 {
         //2、选择流
         InputStream inputStream = new FileInputStream(file);
         //3、操作(分段读取)
-        byte[] bytes = new byte[3];
+        byte[] bytes = new byte[4];
         int temp ;
         while ((temp=inputStream.read(bytes))!=-1){
             String string = new String(bytes,0,temp);

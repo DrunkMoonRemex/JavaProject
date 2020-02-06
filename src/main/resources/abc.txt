@@ -1,1 +1,2 @@
 hello world!
+这是要读取的字符
