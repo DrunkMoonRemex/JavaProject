@@ -1,9 +1,6 @@
 package com.io;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * 文件字节输出流
@@ -15,7 +12,25 @@ import java.io.InputStream;
  */
 public class IOTest03 {
     public static void main(String[] args) throws IOException {
+        File file = new File("src/main/resources/io.txt");
+        OutputStream outputStream = null;
+        try {
+            outputStream = new FileOutputStream(file);
+            byte[] bytes = "this is io operation".getBytes();
+            outputStream.write(bytes);
+            outputStream.flush();
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (outputStream!=null){
+                    outputStream.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
 
+        }
 
     }
 
