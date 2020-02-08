@@ -1,6 +1,8 @@
 package com.io2;
 
 import java.io.*;
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +25,48 @@ public class CompareFileTest {
         //3、获取名称相同的文件中大小也相同的文件
         List<String> sizeAndFileNameSames = getSizeAndFileNameSames(srcPath,srcPath2,sameFileNames);
         //4、判断名称、大小相同的文件，内容是否相同
+        for (String fileName :sizeAndFileNameSames){
+            String fileMD5 = getFileMD5(new File(srcPath+"/"+fileName));
+            System.out.println(fileName+":"+fileMD5);
+            String fileMD52 = getFileMD5(new File(srcPath2+"/"+fileName));
+            System.out.println(fileName+":"+fileMD52);
+            if (fileMD5.equals(fileMD52)){
+                System.out.println(fileName+"在两个文件夹中是完全相同的文件");
+            }
+        }
+
     }
+
+    //获取文件的hash值，采用md5算法
+    public static String getFileMD5(File file) {
+        if (!file.isFile()) {
+            return null;
+        }
+        MessageDigest digest = null;
+        FileInputStream in = null;
+        byte buffer[] = new byte[8192];
+        int len;
+        try {
+            digest =MessageDigest.getInstance("MD5");
+            in = new FileInputStream(file);
+            while ((len = in.read(buffer)) != -1) {
+                digest.update(buffer, 0, len);
+            }
+            BigInteger bigInt = new BigInteger(1, digest.digest());
+            return bigInt.toString(16);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            try {
+                in.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
 
     //读取文件大小，比较大小相同的文件
     private static List<String> getSizeAndFileNameSames(String srcPath, String srcPath2, List<String> sameFileNames) {
