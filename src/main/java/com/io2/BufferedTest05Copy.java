@@ -3,7 +3,7 @@ package com.io2;
 import java.io.*;
 
 /**
- * 用字符缓冲流进行存文本文件的拷贝
+ * 用字符缓冲流进行纯文本文件的拷贝
  */
 public class BufferedTest05Copy {
     public static void main(String[] args) {
