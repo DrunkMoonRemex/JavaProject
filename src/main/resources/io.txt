@@ -1,2 +1,2 @@
-this is io operation
-这是字符串sdfasaga字符串添加this is io operation
+这是字符缓冲流写的内容
+换行后的数据到这里
