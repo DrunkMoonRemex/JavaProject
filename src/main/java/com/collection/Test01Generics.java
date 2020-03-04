@@ -2,7 +2,7 @@ package com.collection;
 
 import java.util.*;
 
-public class TestGenerics {
+public class Test01Generics {
     public static void main(String[] args) {
         // 这里的”String”就是实际传入的数据类型；
         MyCollection<String> mc = new MyCollection<String>();
