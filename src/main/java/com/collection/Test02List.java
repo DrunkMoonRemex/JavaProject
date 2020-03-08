@@ -3,12 +3,14 @@ package com.collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Vector;
 
 public class Test02List {
     public static void main(String[] args) {
         test01();
         test02();
-
+//        ArrayList<String> arrayList = new ArrayList<>(Integer.MAX_VALUE);
+//        arrayList.add("123");
     }
 
     /**
