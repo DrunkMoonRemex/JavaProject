@@ -1,6 +1,7 @@
 package com.collection;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Test03transient implements Serializable {
     public static void main(String[] args) {
@@ -11,16 +12,22 @@ public class Test03transient implements Serializable {
         String name1="常规属性",name2="transient修饰的属性";
         Transient test = new Transient(name1, name2);
         System.out.println("序列化前："+test.toString());
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("ddd");
+        arrayList.add("aaa");
+        arrayList.add("ser");
         ObjectOutputStream outStream;
         ObjectInputStream inStream;
         String filePath = "src/main/resources/Transient.obj";
         try {
             outStream = new ObjectOutputStream(new FileOutputStream(filePath));
             outStream.writeObject(test);
+            outStream.writeObject(arrayList);
 
             inStream = new ObjectInputStream(new FileInputStream(filePath));
             Transient readObject = (Transient)inStream.readObject();
             System.out.println("序列化后："+readObject.toString());
+            System.out.println(inStream.readObject());
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
