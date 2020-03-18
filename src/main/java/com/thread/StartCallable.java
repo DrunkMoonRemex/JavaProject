@@ -41,6 +41,6 @@ public class StartCallable implements Callable {
         System.out.println(ob1+","+ob2+","+ob3);
         //关闭服务
         List<Runnable> runnables = executorService.shutdownNow();
-        System.out.println(Arrays.asList(runnables));
+        System.out.println(Collections.singletonList(runnables));
     }
 }
